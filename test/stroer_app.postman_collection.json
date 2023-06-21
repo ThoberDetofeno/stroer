@@ -1,0 +1,1432 @@
+{
+	"info": {
+		"_postman_id": "16b5f249-3c44-4d20-9436-745fe576ae1c",
+		"name": "stroer_app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24596902"
+	},
+	"item": [
+		{
+			"name": "Test 001 - New Post - OK",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"laboriosam dolor\",\r\n    \"body\": \"facilis sit sint culpa\\nsoluta assumenda eligendi non ut eius\\nsequi ducimus vel quasi\\nveritatis est dolores\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/post/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"post",
+						""
+					]
+				},
+				"description": "Insert a new post without user_id"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 002 - New Post - OK",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"99999942\",\r\n    \"title\": \"quis quasi placeat\",\r\n    \"body\": \"ut libero sit aut totam inventore sunt porro sint qui sunt molestiae consequatur cupiditate qui iste ducimus adipisci dolor enim assumenda soluta laboriosam amet iste delectus hic\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/post/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"post",
+						""
+					]
+				},
+				"description": "Insert new Post with valid id_user = 99999942"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 003 - New Post - FAIL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"9999942\",\r\n    \"title\": \"quis placeat\",\r\n    \"body\": \"ut libero sit aut totam inventore sunt porro sint qui sunt molestiae consequatur cupiditate qui iste ducimus adipisci dolor enim assumenda soluta laboriosam amet iste delectus hic\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/post/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"post",
+						""
+					]
+				},
+				"description": "Insert new Post with invalid user_id"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 004 - New Post - FAIL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"\",\r\n    \"body\": \"ut libero sit aut totam inventore sunt porro sint qui sunt molestiae consequatur cupiditate qui iste ducimus adipisci dolor enim assumenda soluta laboriosam amet iste delectus hic\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/post/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"post",
+						""
+					]
+				},
+				"description": "Insert new Post with null title"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 005 - New Post - FAIL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"laboriosam dolor\",\r\n    \"body\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/post/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"post",
+						""
+					]
+				},
+				"description": "Insert a new post with null body"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 006 - New Post - FAIL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"\",\r\n    \"title\": \"quis quasi placeat\",\r\n    \"body\": \"ut libero sit aut totam inventore sunt porro sint qui sunt molestiae consequatur cupiditate qui iste ducimus adipisci dolor enim assumenda soluta laboriosam amet iste delectus hic\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/post/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"post",
+						""
+					]
+				},
+				"description": "Insert a new post with null id_user"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 007 - New Post - FAIL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"9999a\",\r\n    \"title\": \"quis quasi placeat\",\r\n    \"body\": \"ut libero sit aut totam inventore sunt porro sint qui sunt molestiae consequatur cupiditate qui iste ducimus adipisci dolor enim assumenda soluta laboriosam amet iste delectus hic\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/post/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"post",
+						""
+					]
+				},
+				"description": "Insert a new post with alphanumeric id_user"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 008 - Get Post - OK",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 216effeb02ca104874ba90d917a4cf4c5c742167",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/post/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"post",
+						""
+					]
+				},
+				"description": "Get all posts"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 009 - Get Post - OK",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 216effeb02ca104874ba90d917a4cf4c5c742167",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/post/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"post",
+						"1",
+						""
+					]
+				},
+				"description": "Get a Post"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 010 - Get Post - FAIL",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 216effeb02ca104874ba90d917a4cf4c5c742167",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/post/1A/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"post",
+						"1A",
+						""
+					]
+				},
+				"description": "Get a invalid post"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 011 - Get Post - FAIL",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 216effeb02ca104874ba90d917a4cf4c5c742167",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/post/1000/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"post",
+						"1000",
+						""
+					]
+				},
+				"description": "Get a post not added"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 012 - Put Post - OK",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 216effeb02ca104874ba90d917a4cf4c5c742167",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"new title\",\r\n    \"body\": \"new body\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/post/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"post",
+						"1",
+						""
+					]
+				},
+				"description": "Update title and body of a Post"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 013 - Put Post - OK",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 216effeb02ca104874ba90d917a4cf4c5c742167",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"New Title\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/post/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"post",
+						"2",
+						""
+					]
+				},
+				"description": "Update title and body of a Post"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 014 - Put Post - OK",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 216effeb02ca104874ba90d917a4cf4c5c742167",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"body\": \"new body\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/post/3/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"post",
+						"3",
+						""
+					]
+				},
+				"description": "Update title of a Post"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 015 - Put Post - FAIL",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 216effeb02ca104874ba90d917a4cf4c5c742167",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": 25255\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/post/4/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"post",
+						"4",
+						""
+					]
+				},
+				"description": "Update body of a Post"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 016 - Put Post - FAIL",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 216effeb02ca104874ba90d917a4cf4c5c742167",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\": \"99999942\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/post/2/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"post",
+						"2",
+						""
+					]
+				},
+				"description": "Update body of a Post"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 017 - Del Post - OK",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 216effeb02ca104874ba90d917a4cf4c5c742167",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/post/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"post",
+						"1",
+						""
+					]
+				},
+				"description": "Get a Post"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 018 - Del Post - FAIL",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 216effeb02ca104874ba90d917a4cf4c5c742167",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/post/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"post",
+						"1",
+						""
+					]
+				},
+				"description": "Get a Post"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 019 - New Comment - OK",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"post_id\": 101,\r\n    \"name\": \"et fugit eligendi deleniti quidem qui sint nihil autem\",\r\n    \"email\": \"Presley.Mueller@myrl.com\",\r\n    \"body\": \"doloribus at sed quis culpa deserunt consectetur qui praesentium\\naccusamus fugiat dicta\\nvoluptatem rerum ut voluptate autem\\nvoluptatem repellendus aspernatur dolorem in\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/comment/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"comment",
+						""
+					]
+				},
+				"description": "Insert a new post without user_id"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 020 - New Comment - FAIL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"post_id\": 101,\r\n    \"name\": \"et fugit eligendi deleniti quidem qui sint nihil autem\",\r\n    \"email\": \"Presley.Mueller@myrl.com\",\r\n    \"body\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/comment/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"comment",
+						""
+					]
+				},
+				"description": "Insert a new post without user_id"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 021 - New Comment - FAIL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"post_id\": 101,\r\n    \"name\": \"et fugit eligendi deleniti quidem qui sint nihil autem\",\r\n    \"email\": \"Presley.Mueller@myrl.com\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/comment/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"comment",
+						""
+					]
+				},
+				"description": "Insert a new post without user_id"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 022 - New Comment - FAIL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"post_id\": 101,\r\n    \"name\": \"et fugit eligendi deleniti quidem qui sint nihil autem\",\r\n    \"email\": \"\",\r\n    \"body\": \"doloribus at sed quis culpa deserunt consectetur qui praesentium\\naccusamus fugiat dicta\\nvoluptatem rerum ut voluptate autem\\nvoluptatem repellendus aspernatur dolorem in\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/comment/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"comment",
+						""
+					]
+				},
+				"description": "Insert a new post without user_id"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 023 - New Comment - FAIL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"post_id\": 101,\r\n    \"name\": \"et fugit eligendi deleniti quidem qui sint nihil autem\",\r\n    \"body\": \"doloribus at sed quis culpa deserunt consectetur qui praesentium\\naccusamus fugiat dicta\\nvoluptatem rerum ut voluptate autem\\nvoluptatem repellendus aspernatur dolorem in\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/comment/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"comment",
+						""
+					]
+				},
+				"description": "Insert a new post without user_id"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 024 - New Comment - FAIL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"post_id\": 101,\r\n    \"name\": \"et fugit eligendi deleniti quidem qui sint nihil autem\",\r\n    \"email\": \"Presley.Mueller@myrl\",\r\n    \"body\": \"doloribus at sed quis culpa deserunt consectetur qui praesentium\\naccusamus fugiat dicta\\nvoluptatem rerum ut voluptate autem\\nvoluptatem repellendus aspernatur dolorem in\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/comment/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"comment",
+						""
+					]
+				},
+				"description": "Insert a new post without user_id"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 025 - New Comment - FAIL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"post_id\": 101,\r\n    \"name\": \"\",\r\n    \"email\": \"Presley.Mueller@myrl.com\",\r\n    \"body\": \"doloribus at sed quis culpa deserunt consectetur qui praesentium\\naccusamus fugiat dicta\\nvoluptatem rerum ut voluptate autem\\nvoluptatem repellendus aspernatur dolorem in\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/comment/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"comment",
+						""
+					]
+				},
+				"description": "Insert a new post without user_id"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 026 - New Comment - FAIL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"post_id\": 101,\r\n    \"email\": \"Presley.Mueller@myrl.com\",\r\n    \"body\": \"doloribus at sed quis culpa deserunt consectetur qui praesentium\\naccusamus fugiat dicta\\nvoluptatem rerum ut voluptate autem\\nvoluptatem repellendus aspernatur dolorem in\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/comment/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"comment",
+						""
+					]
+				},
+				"description": "Insert a new post without user_id"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 027 - New Comment - FAIL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"post_id\": 9999999999,\r\n    \"name\": \"et fugit eligendi deleniti quidem qui sint nihil autem\",\r\n    \"email\": \"Presley.Mueller@myrl.com\",\r\n    \"body\": \"doloribus at sed quis culpa deserunt consectetur qui praesentium\\naccusamus fugiat dicta\\nvoluptatem rerum ut voluptate autem\\nvoluptatem repellendus aspernatur dolorem in\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/comment/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"comment",
+						""
+					]
+				},
+				"description": "Insert a new post without user_id"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 028 - New Comment - FAIL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"post_id\": \"A\",\r\n    \"name\": \"et fugit eligendi deleniti quidem qui sint nihil autem\",\r\n    \"email\": \"Presley.Mueller@myrl.com\",\r\n    \"body\": \"doloribus at sed quis culpa deserunt consectetur qui praesentium\\naccusamus fugiat dicta\\nvoluptatem rerum ut voluptate autem\\nvoluptatem repellendus aspernatur dolorem in\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/comment/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"comment",
+						""
+					]
+				},
+				"description": "Insert a new post without user_id"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 029 - New Comment - FAIL",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"et fugit eligendi deleniti quidem qui sint nihil autem\",\r\n    \"email\": \"Presley.Mueller@myrl.com\",\r\n    \"body\": \"doloribus at sed quis culpa deserunt consectetur qui praesentium\\naccusamus fugiat dicta\\nvoluptatem rerum ut voluptate autem\\nvoluptatem repellendus aspernatur dolorem in\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/comment/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"comment",
+						""
+					]
+				},
+				"description": "Insert a new post without user_id"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 030 - Get Comment - OK",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 216effeb02ca104874ba90d917a4cf4c5c742167",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/comment/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"comment",
+						""
+					]
+				},
+				"description": "Get all posts"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 031 - Get Comment  - OK",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 216effeb02ca104874ba90d917a4cf4c5c742167",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/comment/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"comment",
+						"1",
+						""
+					]
+				},
+				"description": "Get all posts"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 032 - Get Comment - OK",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 216effeb02ca104874ba90d917a4cf4c5c742167",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/comment/?post_id=1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"comment",
+						""
+					],
+					"query": [
+						{
+							"key": "post_id",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Get all posts"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 033 - Get Comment - FAIL",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 216effeb02ca104874ba90d917a4cf4c5c742167",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/comment/1A/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"comment",
+						"1A",
+						""
+					]
+				},
+				"description": "Get all posts"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 034 - Get Comment - FAIL",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 216effeb02ca104874ba90d917a4cf4c5c742167",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/comment/99999/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"comment",
+						"99999",
+						""
+					]
+				},
+				"description": "Get all posts"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 035 - Put Comment - OK",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"post_id\": 102,\r\n    \"name\": \"new name\",\r\n    \"email\": \"new.email@myrl.com\",\r\n    \"body\": \"newbody\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/comment/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"comment",
+						"1",
+						""
+					]
+				},
+				"description": "Insert a new post without user_id"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 036 - Put Comment - OK",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"new name2\",\r\n    \"email\": \"new.email2@myrl.com\",\r\n    \"body\": \"newbody2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/comment/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"comment",
+						"1",
+						""
+					]
+				},
+				"description": "Insert a new post without user_id"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 037 - Put Comment - OK",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"new name3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/comment/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"comment",
+						"1",
+						""
+					]
+				},
+				"description": "Insert a new post without user_id"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 038 - Put Comment - OK",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"new.email3@myrl.com\",\r\n    \"body\": \"newbody3\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/comment/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"comment",
+						"1",
+						""
+					]
+				},
+				"description": "Insert a new post without user_id"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 039 - Put Comment - FAIL",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"post_id\": 9999999,\r\n    \"name\": \"new name\",\r\n    \"email\": \"new.email@myrl.com\",\r\n    \"body\": \"newbody\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/comment/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"comment",
+						"1",
+						""
+					]
+				},
+				"description": "Insert a new post without user_id"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 040 - Put Comment - FAIL",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"post_id\": 1,\r\n    \"name\": \"\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/comment/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"comment",
+						"1",
+						""
+					]
+				},
+				"description": "Insert a new post without user_id"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 041 - Del Comment - OK",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 216effeb02ca104874ba90d917a4cf4c5c742167",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/comment/1/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"comment",
+						"1",
+						""
+					]
+				},
+				"description": "Get a Post"
+			},
+			"response": []
+		},
+		{
+			"name": "Test 042 - Del Comment - FAIL",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Token 216effeb02ca104874ba90d917a4cf4c5c742167",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/comment/9999999/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"comment",
+						"9999999",
+						""
+					]
+				},
+				"description": "Get a Post"
+			},
+			"response": []
+		}
+	]
+}
