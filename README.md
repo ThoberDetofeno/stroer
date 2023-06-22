@@ -4,11 +4,12 @@ Simple REST API to interact with Post and Comment data the Fake API in JSONPlace
 
 ## 🚀 Installation
 
+In this section we will guide how to create a Django REST framework environment used in this project in 6 steps:
+
 1. Install a virtual environment, you must have python pre-installed in your system.
 ```python
 python3.8 -m virtualenv venv
 ```
-
 2. Now open a directory and starts the project in a virtual environment. For this, run the following command in that directory.
 ```python
 venv\Scripts\Activate.ps1
@@ -27,18 +28,17 @@ pip install requests
 # Psycopg2 is a  driver for interacting with PostgreSQL from the Python. 
 psycopg2-binary==2.9.6
 ```
+For more details about the requirements this project, see too the [requirements.txt](https://github.com/ThoberDetofeno/stroer/blob/main/source_code/stroer_prj/requirements.txt)
 
-
-Instalar o Django Rest Framework
-> pip install djangorestframework==3.14.0
-
-Instalar o Django Filter
-> pip install django-filter==22.1
-
-Instalar o Request
-pip install requests 
-
-Create a new Django project:
+5. After the installation, start a Django project using the command:
+```python
+django-admin startproject stroer_prj
+```
+6. Next, start an app.
+```python
+python manage.py startapp stroer_app
+```
+You just created your Django app for this project.
 
 ## 🏃‍♂️ Commands
 
