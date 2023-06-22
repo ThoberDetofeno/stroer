@@ -107,11 +107,16 @@ The schema defines all the fields that exist within a comment record.
 | name  | Display name for the comment author. |
 | email  | Email address for the comment author.  |
 | body  | The content for the comment.  |
-#### Definition
-
 
 #### List Comments
+Query this endpoint to retrieve a collection of comments. The response you receive can be controlled and filtered using the URL query parameters below.
 
+Definitions: GET /comment/, GET /comment/id/, GET /comment/?post_id=value
+
+Example Request: 
+* GET all Comments: https://example.com/comment/
+* Get a Comment: GET https://example.com/comment/1/
+* Get all comments of a Post: https://example.com/comment/?post_id=1
 
 #### Create a Comment
 Arguments: [post_id, name, email, body]
