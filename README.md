@@ -95,12 +95,13 @@ The schema defines all the fields that exist within a post record.
 #### List Posts
 Query this endpoint to retrieve a collection of posts. The response you receive can be controlled and filtered using the URL query parameters below.
 
-Definitions: GET /post/ | GET /post/id/ | GET /post/?user_id=value
+Definitions: GET /post/ | GET /post/id/ | GET /post/?user_id=value | GET /post/?search=text_value
 
 Example Request: 
 * GET all posts: https://example.com/post/
 * Get a post: GET https://example.com/post/1/
-* Get all posts of a user_id: https://example.com/post/?user_id=1
+* Get all posts by user_id: https://example.com/post/?user_id=1
+* Get all post by search in body: https://example.com/post/?search=voluptatem
 
 #### Create a Post
 Arguments: [user_id, title, body]
@@ -164,12 +165,14 @@ The schema defines all the fields that exist within a comment record.
 #### List Comments
 Query this endpoint to retrieve a collection of comments. The response you receive can be controlled and filtered using the URL query parameters below.
 
-Definitions: GET /comment/ | GET /comment/id/ | GET /comment/?post_id=value
+Definitions: GET /comment/ | GET /comment/id/ | GET /comment/?post_id=post_value | GET /comment/?email=email_value | GET /post/?search=text_value
 
 Example Request: 
 * GET all comments: https://example.com/comment/
 * Get a comment: GET https://example.com/comment/1/
-* Get all comments of a post: https://example.com/comment/?post_id=1
+* Get all comments by post: https://example.com/comment/?post_id=1
+* Get all comments by email: https://example.com/comment/?email=Mallory_Kunze%40marie.org
+* Get all comments by search in body: https://example.com/comment/?search=voluptatem
 
 #### Create a Comment
 Arguments: [post_id, name, email, body]
