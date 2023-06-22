@@ -37,8 +37,8 @@ class PostViewSet(viewsets.ModelViewSet):
     serializer_class = PostSerializer
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter, filters.SearchFilter]
     ordering_fields = ['id', 'user_id']
-    search_fields = ['user_id', 'title', 'body']
-    filterset_fields = ['user_id', 'title', 'body']
+    search_fields = ['title', 'body']
+    filterset_fields = ['user_id']
 
     def update(self, request, *args, **kwargs):
         """Enable the partial update and not allow updating in user id.
@@ -96,8 +96,8 @@ class CommentViewSet(viewsets.ModelViewSet):
     serializer_class = CommentSerializer
     filter_backends = [DjangoFilterBackend, filters.OrderingFilter, filters.SearchFilter]
     ordering_fields = ['id', 'postId']
-    search_fields = ['post_id', 'name', 'email', 'body']
-    filterset_fields = ['post_id', 'name', 'email', 'body']
+    search_fields = ['body']
+    filterset_fields = ['post_id', 'email']
 
     def update(self, request, *args, **kwargs):
         """Enable the partial update.
