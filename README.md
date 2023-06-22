@@ -95,6 +95,26 @@ The schema defines all the fields that exist within a post record.
 #### List Posts
 
 #### Create a Post
+Arguments: [user_id, title, body]
+
+Definition: POST /post/
+
+Example Request: POST https://example.com/post/
+```JSON
+{
+    "user_id": "99999942",
+    "title": "quis quasi placeat",
+    "body": "ut libero sit aut totam inventore sunt porro sint qui sunt molestiae consequatur cupiditate"
+}
+```
+or simple post (without user_id)
+```JSON
+{
+    "title": "laboriosam dolor",
+    "body": "facilis sit sint culpa\nsoluta assumenda eligendi non ut eius\nsequi ducimus"
+}
+```
+It is possible only new post with user ID 99999942.
 
 #### Update a Post
 Arguments: [id, title, body]
