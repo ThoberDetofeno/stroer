@@ -2,8 +2,8 @@ version: "3.9"
 
 services:
   djangoapp:
-    container_name: djangoapp
-    build: .
+    container_name: django_thober
+    image: thober/djangoapp:0.0.2
     ports:
       - "8000:8000"
     environment:
