@@ -82,6 +82,44 @@ python manage.py sync_jsonplaceholder -p check
 ```
 ## 🏃‍♂️ REST APIs
 
+
+### POST API
+#### Schema
+The schema defines all the fields that exist within a post record.
+| Field  | Description |
+| ------------- | ------------- |
+| id  | Unique identifier for the post.  |
+| user_id  | The ID for the author of the post. |
+| title  | The title for the post.  |
+| body  | The content for the post.  |
+
+
+
+
+### COMMENT API
+
+#### Schema
+The schema defines all the fields that exist within a comment record.
+| Field  | Description |
+| ------------- | ------------- |
+| post_id  | The ID of the associated post object.  |
+| name  | Display name for the comment author. |
+| email  | Email address for the comment author.  |
+| body  | The content for the comment.  |
+#### Definition
+
+
+#### List Comments
+
+
+#### Create a Comment
+Arguments
+
+#### Update a Comment
+
+#### Delete a Comment
+
+
 ## :bomb: REST API Tests
 API tests were created and executed using Postman. We created 42 API tests for most common CRUD operations.
 
@@ -92,3 +130,4 @@ The created tests can be imported into Postman from the file below:
 
 See also <a href="https://learning.postman.com/docs/getting-started/importing-and-exporting-data/">Importing and exporting data</a>.
 
+## :whale: Docker and docker-compose
