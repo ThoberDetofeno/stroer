@@ -102,6 +102,7 @@ The schema defines all the fields that exist within a post record.
 The schema defines all the fields that exist within a comment record.
 | Field  | Description |
 | ------------- | ------------- |
+| id  | Unique identifier for the comment. |
 | post_id  | The ID of the associated post object.  |
 | name  | Display name for the comment author. |
 | email  | Email address for the comment author.  |
@@ -113,12 +114,45 @@ The schema defines all the fields that exist within a comment record.
 
 
 #### Create a Comment
-Arguments
+Arguments: [post_id, name, email, body]
 
+Definition: POST /comment/
+
+Example Request: POST https://example.com/comment/
+```JSON
+{
+   "post_id": 1,
+   "name": "et fugit eligendi deleniti quidem qui sint nihil autem",
+   "email": "Presley.Mueller@myrl.com",
+   "body": "doloribus at sed quis culpa deserunt consectetur qui praesentium"
+}
+```
 #### Update a Comment
+Arguments: [id, post_id, name, email, body]
 
+Definition: PUT /comment/id/
+
+Example Request: PUT https://example.com/comment/1/
+```JSON
+{
+   "post_id": 1,
+   "name": "new name",
+   "email": "new.email@myrl.com",
+   "body": "newbody"
+}
+```
+or partial update
+```JSON
+{
+   "name": "new name"
+}
+```
 #### Delete a Comment
+Arguments: [id]
 
+Definition: DELETE /comment/id/
+
+Example Request: DELETE https://example.com/comment/1/
 
 ## :bomb: REST API Tests
 API tests were created and executed using Postman. We created 42 API tests for most common CRUD operations.
