@@ -2,6 +2,10 @@
 
 Simple REST API to interact with Post and Comment data the Fake API in JSONPlaceholder (Free Fake REST API) using Python 3, Django, Django REST framework and PostgreSQL.
 
+Here is a schema of the architecture used in this application:
+
+<img src="docs/architecture.png" alt="drawing" width="400"/>
+
 ## 🚀 Installation
 
 In this section we will guide how to create a Django REST framework environment used in this project in 6 steps:
