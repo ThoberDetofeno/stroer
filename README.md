@@ -40,8 +40,20 @@ python manage.py startapp stroer_app
 ```
 You just created your Django app for this project.
 
-## Iniciar o Django 
-
+At this point we have a complete skeleton project. 
+Now we should first run a database migration. 
+```python
+# Running database migrations
+python manage.py makemigrations
+python manage.py migrate
+```
+We'll also create an initial user. 
+```python
+python manage.py createsuperuser
+```
+In the last, run the development web server by calling the runserver command.
+```python
+python manage.py runserver
 
 ## :hammer: Commands
 In this project has 3 Django commands to help in the beginning and synchronize the systems.
@@ -54,7 +66,8 @@ python manage.py import_jsonplaceholder
 ```python
 python manage.py delete_jsonplaceholder
 ```
-3. Synchronizes the MASTER systems with the JSONPlaceholder API. Choose a the options: forced, add, or check.
+3. Synchronizes the MASTER systems with the JSONPlaceholder API.
+   
 Synchronization with Option "forced". Delete all Posts and Comments and re-include.
 ```python
 python manage.py sync_jsonplaceholder -p forced
