@@ -40,8 +40,33 @@ python manage.py startapp stroer_app
 ```
 You just created your Django app for this project.
 
-## 🏃‍♂️ Commands
+## Iniciar o Django 
 
+
+## :hammer: Commands
+In this project has 3 Django commands to help in the beginning and synchronize the systems.
+
+1. Import all Post and Comments linked with JsonPlaceHolder.
+```python
+python manage.py import_jsonplaceholder
+```
+2. Delete all Post and Comments linked with JsonPlaceHolder.
+```python
+python manage.py delete_jsonplaceholder
+```
+3. Synchronizes the MASTER systems with the JSONPlaceholder API. Choose a the options: forced, add, or check.
+Synchronization with Option "forced". Delete all Posts and Comments and re-include.
+```python
+python manage.py sync_jsonplaceholder -p forced
+```
+Synchronization with Option "add". It includes all the Posts and Comments that are in JsonPlaceHolder but not in MASTER.
+```python
+python manage.py sync_jsonplaceholder -p add
+```
+Synchronization with Option "check". This option includes new posts and comments made after the last import.
+```python
+python manage.py sync_jsonplaceholder -p check
+```
 ## 🏃‍♂️ REST APIs
 
 ## 🏃‍♂️ REST API Tests
