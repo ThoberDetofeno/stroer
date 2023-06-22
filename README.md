@@ -93,6 +93,13 @@ The schema defines all the fields that exist within a post record.
 | body  | The content for the post.  |
 
 #### List Posts
+Query this endpoint to retrieve a collection of posts. The response you receive can be controlled and filtered using the URL query parameters below.
+Definitions: GET /post/ | GET /post/id/ | GET /post/?user_id=value
+
+Example Request: 
+* GET all posts: https://example.com/post/
+* Get a post: GET https://example.com/post/1/
+* Get all posts of a user_id: https://example.com/post/?user_id=1
 
 #### Create a Post
 Arguments: [user_id, title, body]
@@ -161,7 +168,7 @@ Definitions: GET /comment/ | GET /comment/id/ | GET /comment/?post_id=value
 Example Request: 
 * GET all comments: https://example.com/comment/
 * Get a comment: GET https://example.com/comment/1/
-* Get all comments of a Post: https://example.com/comment/?post_id=1
+* Get all comments of a post: https://example.com/comment/?post_id=1
 
 #### Create a Comment
 Arguments: [post_id, name, email, body]
