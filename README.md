@@ -54,7 +54,7 @@ python manage.py createsuperuser
 In the last, run the development web server by calling the runserver command.
 ```python
 python manage.py runserver
-
+```
 ## :hammer: Commands
 In this project has 3 Django commands to help in the beginning and synchronize the systems.
 
