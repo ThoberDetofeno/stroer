@@ -81,8 +81,7 @@ Synchronization with Option "check". This option includes new posts and comments
 python manage.py sync_jsonplaceholder -p check
 ```
 ## 🏃‍♂️ REST APIs
-
-
+This REST API provides an interface for applications to interact with Post and Comment.
 ### POST API
 #### Schema
 The schema defines all the fields that exist within a post record.
@@ -93,11 +92,37 @@ The schema defines all the fields that exist within a post record.
 | title  | The title for the post.  |
 | body  | The content for the post.  |
 
+#### List Posts
 
+#### Create a Post
 
+#### Update a Post
+Arguments: [id, title, body]
+
+Definition: PUT /post/id/
+
+Example Request: PUT https://example.com/post/1/
+```JSON
+{
+    "title": "new title",
+    "body": "new body"
+}
+```
+or partial update
+```JSON
+{
+    "title": "New Title"
+}
+```
+
+#### Delete a Post
+Arguments: [id]
+
+Definition: DELETE /post/id/
+
+Example Request: DELETE https://example.com/post/1/
 
 ### COMMENT API
-
 #### Schema
 The schema defines all the fields that exist within a comment record.
 | Field  | Description |
@@ -111,11 +136,11 @@ The schema defines all the fields that exist within a comment record.
 #### List Comments
 Query this endpoint to retrieve a collection of comments. The response you receive can be controlled and filtered using the URL query parameters below.
 
-Definitions: GET /comment/, GET /comment/id/, GET /comment/?post_id=value
+Definitions: GET /comment/ | GET /comment/id/ | GET /comment/?post_id=value
 
 Example Request: 
-* GET all Comments: https://example.com/comment/
-* Get a Comment: GET https://example.com/comment/1/
+* GET all comments: https://example.com/comment/
+* Get a comment: GET https://example.com/comment/1/
 * Get all comments of a Post: https://example.com/comment/?post_id=1
 
 #### Create a Comment
