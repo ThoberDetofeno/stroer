@@ -94,6 +94,7 @@ The schema defines all the fields that exist within a post record.
 
 #### List Posts
 Query this endpoint to retrieve a collection of posts. The response you receive can be controlled and filtered using the URL query parameters below.
+
 Definitions: GET /post/ | GET /post/id/ | GET /post/?user_id=value
 
 Example Request: 
