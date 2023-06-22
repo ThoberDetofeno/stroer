@@ -82,4 +82,13 @@ python manage.py sync_jsonplaceholder -p check
 ```
 ## 🏃‍♂️ REST APIs
 
-## 🏃‍♂️ REST API Tests
+## :bomb: REST API Tests
+API tests were created and executed using Postman. We created 42 API tests for most common CRUD operations.
+
+<img src="docs/postman_tests.png" alt="drawing" width="400"/> 
+The created tests can be imported into Postman from the file below:
+
+[stroer_app.postman_collection.json](https://github.com/ThoberDetofeno/stroer/blob/main/test/stroer_app.postman_collection.json)
+
+See also <a href="https://learning.postman.com/docs/getting-started/importing-and-exporting-data/">Importing and exporting data</a>.
+
