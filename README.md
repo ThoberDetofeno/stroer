@@ -215,6 +215,9 @@ Definition: DELETE /comment/id/
 
 Example Request: DELETE https://example.com/comment/1/
 
+## :lock: Authentication
+
+
 ## :bomb: REST API Tests
 API tests were created and executed using Postman. We created 42 API tests for most common CRUD operations.
 
