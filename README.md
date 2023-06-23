@@ -1,10 +1,33 @@
-# Simple REST API in Django REST framework
+# Python CRUD Simple Rest API, using: Django, Postgres, Docker and Docker Compose
 
 Simple REST API to interact with Post and Comment data the Fake API in JSONPlaceholder (Free Fake REST API) using Python 3, Django, Django REST framework and PostgreSQL.
 
 Here is a schema of the architecture used in this application:
 
 <img src="docs/architecture.png" alt="drawing" width="400"/>
+
+## :whale: Docker and docker-compose
+Created three files to Dockerize the project.
+### django.sh
+When it will run the app, it will not have the tables in the database, so it need to create the migrations and run them.
+To do this, I were creating a bash script to execute the commands.
+It will execute them when it run the djangoapp container.
+
+Get the django.sh [here](https://github.com/ThoberDetofeno/stroer/blob/main/source_code/stroer_prj/django.sh).
+
+### Dockerfile
+The Dockerfile will contain the instructions to build the project's image.
+
+Get the Dockerfile [here](https://github.com/ThoberDetofeno/stroer/blob/main/source_code/stroer_prj/Dockerfile).
+
+The ENTRYPOINT ["/django.sh"] line is important. By doing so, we can run the django.sh file when the container starts, with all the necessary instructions.
+
+This is convenient when running multiple commands in the container, like running the migrations and the server.
+
+### docker-compose.yml
+
+
+### 🏃‍♂️ Run the project
 
 ## 🚀 Installation
 
@@ -241,5 +264,3 @@ The created tests can be imported into Postman from the file below:
 [stroer_app.postman_collection.json](https://github.com/ThoberDetofeno/stroer/blob/main/test/stroer_app.postman_collection.json)
 
 See also <a href="https://learning.postman.com/docs/getting-started/importing-and-exporting-data/">Importing and exporting data</a>.
-
-## :whale: Docker and docker-compose
