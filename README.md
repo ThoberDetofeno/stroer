@@ -6,6 +6,14 @@ Here is a schema of the architecture used in this application:
 
 <img src="docs/architecture.png" alt="drawing" width="400"/>
 
+This README as the following sections:
+* Docker and docker-compose
+* Installation
+* Commands
+* Authentication
+* REST APIs
+* REST API Tests
+
 ## :whale: Docker and docker-compose
 This section show the three files to Dockerize and run the project.
 
