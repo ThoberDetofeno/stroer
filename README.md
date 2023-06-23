@@ -53,6 +53,11 @@ Now that the image is built, let's run the Django app (django_thober image).
 docker-compose up
 ```
 
+:warning: **Don't forget to create a user to use authentication.**
+```python
+python manage.py createsuperuser
+```
+
 ## 🚀 Installation
 
 In this section we will guide how to create a Django REST framework environment used in this project in 6 steps:
