@@ -7,7 +7,8 @@ Here is a schema of the architecture used in this application:
 <img src="docs/architecture.png" alt="drawing" width="400"/>
 
 ## :whale: Docker and docker-compose
-Created three files to Dockerize the project.
+This section show the three files to Dockerize and run the project.
+
 ### django.sh
 When it will run the app, it will not have the tables in the database, so it need to create the migrations and run them.
 To do this, I were creating a bash script to execute the commands.
@@ -30,8 +31,7 @@ Get the docker-compose.yml [here](https://github.com/ThoberDetofeno/stroer/blob/
 > For this project I am sharing container image in the Docker Hub, with the source code and the configuration Django. 
 > Pulls image from the repository: docker pull thober/djangoapp:0.0.2
 
-
-### 🏃‍♂️ Run the project
+### Run the project
 
 ## 🚀 Installation
 
