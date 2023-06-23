@@ -230,12 +230,12 @@ After clicking Add, all you have to do is select the user on which we want to cr
 In the part of the client that connects to the service, you just have to add the Authorization key: Token <generated token> in the header of the request, and with this, everything would be.
 
 To use authentication in Postman just include in the Header the Key Authorization with the Value.
+<img src="docs/autho_postman.png" alt="drawing" width="500"/>
 
-<img src="docs/autho_postman.png" alt="drawing" width="400"/>
 ## :bomb: REST API Tests
 API tests were created and executed using Postman. We created 42 API tests for most common CRUD operations.
 
-<img src="docs/postman_tests.png" alt="drawing" width="400"/> 
+<img src="docs/postman_tests.png" alt="drawing" width="600"/> 
 The created tests can be imported into Postman from the file below:
 
 [stroer_app.postman_collection.json](https://github.com/ThoberDetofeno/stroer/blob/main/test/stroer_app.postman_collection.json)
