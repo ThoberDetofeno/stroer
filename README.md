@@ -20,11 +20,15 @@ The Dockerfile will contain the instructions to build the project's image.
 
 Get the Dockerfile [here](https://github.com/ThoberDetofeno/stroer/blob/main/source_code/stroer_prj/Dockerfile).
 
-The ENTRYPOINT ["/django.sh"] line is important. By doing so, we can run the django.sh file when the container starts, with all the necessary instructions.
-
-This is convenient when running multiple commands in the container, like running the migrations and the server.
+The ENTRYPOINT ["/django.sh"] line is important. By doing so, we can run the django.sh file when the container starts, with all the necessary instructions. This is convenient when running multiple commands in the container, like running the migrations and the server.
 
 ### docker-compose.yml
+The docker-compose.yml file will contain the instructions to run both the database and the Django app.
+
+Get the docker-compose.yml [here](https://github.com/ThoberDetofeno/stroer/blob/main/source_code/stroer_prj/docker-compose.yml).
+> **Note**
+> For this project I am sharing container image in the Docker Hub, with the source code and the configuration Django. 
+> Pulls image from the repository: docker pull thober/djangoapp:0.0.2
 
 
 ### 🏃‍♂️ Run the project
