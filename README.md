@@ -136,6 +136,21 @@ Synchronization with Option "check". This option includes new posts and comments
 ```python
 python manage.py sync_jsonplaceholder -p check
 ```
+
+## :lock: Authentication
+It is very simple to make it work Django authentication,  basically what you have to do is create a user as you would normally do in Django and go to a new section that appears in the administrative part of the system to create the Token for that user.
+
+> **Note**
+> There are ways to create tokens automatically, which are explained in the Django Rest framework documentation.
+After clicking Add, all you have to do is select the user on which we want to create the Token.
+<img src="docs/add_token.png" alt="drawing" width="400"/>
+
+In the part of the client that connects to the service, you just have to add the Authorization key: Token <generated token> in the header of the request, and with this, everything would be.
+
+To use authentication in Postman just include in the Header the Key Authorization with the Value.
+<img src="docs/autho_postman.png" alt="drawing" width="500"/>
+
+
 ## 🏃‍♂️ REST APIs
 This REST API provides an interface for applications to interact with Post and Comment.
 ### POST API
@@ -270,19 +285,6 @@ Arguments: [id]
 Definition: DELETE /comment/id/
 
 Example Request: DELETE https://example.com/comment/1/
-
-## :lock: Authentication
-It is very simple to make it work Django authentication,  basically what you have to do is create a user as you would normally do in Django and go to a new section that appears in the administrative part of the system to create the Token for that user.
-
-> **Note**
-> There are ways to create tokens automatically, which are explained in the Django Rest framework documentation.
-After clicking Add, all you have to do is select the user on which we want to create the Token.
-<img src="docs/add_token.png" alt="drawing" width="400"/>
-
-In the part of the client that connects to the service, you just have to add the Authorization key: Token <generated token> in the header of the request, and with this, everything would be.
-
-To use authentication in Postman just include in the Header the Key Authorization with the Value.
-<img src="docs/autho_postman.png" alt="drawing" width="500"/>
 
 ## :bomb: REST API Tests
 API tests were created and executed using Postman. We created 42 API tests for most common CRUD operations.
