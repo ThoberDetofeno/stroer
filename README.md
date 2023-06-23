@@ -28,10 +28,31 @@ The docker-compose.yml file will contain the instructions to run both the databa
 
 Get the docker-compose.yml [here](https://github.com/ThoberDetofeno/stroer/blob/main/source_code/stroer_prj/docker-compose.yml).
 > **Note**
-> For this project I am sharing container image in the Docker Hub, with the source code and the configuration Django. 
-> Pulls image from the repository: docker pull thober/djangoapp:0.0.2
+> * For this project I am sharing container image in the Docker Hub, with the source code and the configuration Django.
+> * Pulls image from the repository: docker pull thober/djangoapp:0.0.2
 
 ### Run the project
+It's now time to run the project.
+
+First of all, let's run the database.
+```docker
+docker-compose up -d db
+```
+This will run the database in the background.
+We can check it using TablePlus.
+
+> **Let's create a new connection with these parameters:**
+> * Host: localhost
+> * Port: 5432
+> * Username: postgres
+> * Password: postgres
+> * Database: postgres
+
+Now that the image is built, let's run the Django app (django_thober image).
+```docker
+docker-compose up
+```
+
 
 ## 🚀 Installation
 
